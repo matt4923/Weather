@@ -8,7 +8,7 @@ class SearchBar extends Component {
         super(props);
         
         this.state = { term: '' };
-        /*weird stuff-- binding to itself and replace... research "this" in JavaScript */
+        /*weird stuff-- binding to itself and replace. */
         /*Callbacks referencing 'this' may need to be bound like so */
         this.onInputChange = this.onInputChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
