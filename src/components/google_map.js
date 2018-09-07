@@ -4,7 +4,7 @@ class GoogleMap extends Component {
     componentDidMount() {
         console.log('lat: ', this.props.lat);
         console.log('lon: ', this.props.lon);
-       const g = new GoogleMap.maps.Map(
+       new GoogleMap.maps.Map(
             this.refs.map, {
                 zoom: 12, 
                 center: {
@@ -12,7 +12,6 @@ class GoogleMap extends Component {
                     lng: this.props.lon
                 }
             });
-        return g;
     }
 
     render() {

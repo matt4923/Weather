@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from '../components/chart';
-import GoogleMap from '../components/google_map';
+// import GoogleMap from '../components/google_map';
 
 class WeatherList extends Component {
    renderWeather(cityData) {
@@ -13,12 +13,14 @@ class WeatherList extends Component {
         // console.log('press: ', pressures);
         // console.log('humidities: ', humidities);
         
-        const { lon, lat } = cityData.city.coord;
+        // const { lon, lat } = cityData.city.coord;
         
         return (
             
             <tr key={name}>
-                <td><GoogleMap lon={lon} lat={lat} /></td>
+                {/* Can't get this damn google maps to work! */}
+                {/* <td><GoogleMap lon={lon} lat={lat} /></td> */}
+                <td>{cityData.city.name}</td>
                 {/* <td>
                     <Sparklines height={120} width={180} data={temps}>
                         <SparklinesLine color = "red" />
